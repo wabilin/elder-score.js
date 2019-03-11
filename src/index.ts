@@ -12,7 +12,23 @@ const flatDepth = (array: any[], depth: number): any[] => {
   }, []);
 }
 
-const arrayFunctions = {
+const _ = {
+  isArguments(x: unknown) {
+    return _.isObjectLike(x) && x.toString() === '[object Arguments]';
+  },
+
+  isArray(x: unknown) {
+    return Array.isArray(x);
+  },
+
+  isBoolean(x: unknown): x is boolean {
+    return x === true || x === false;
+  },
+
+  isObjectLike(x: unknown): x is object {
+    return typeof x === 'object' && x !== null
+  },
+
   compact<T>(elements: T[]): T[] {
     return elements.filter(Boolean);
   },
@@ -41,6 +57,4 @@ const arrayFunctions = {
   },
 };
 
-export default { 
-  ...arrayFunctions,
-};
+export default _;
