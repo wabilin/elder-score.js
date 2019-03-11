@@ -1,5 +1,13 @@
 import _ from '../src'
 
+describe('compact', () => {
+  it('remove all falsy values', () => {
+    expect(
+      _.compact([1, 0, true, 'hi', '', null, undefined, {}])
+    ).toEqual([1, true, 'hi', {}])
+  })
+})
+
 describe('concat', () => {
   it('returns [] when no args are given', () => {
     expect(_.concat()).toEqual([]);
@@ -15,6 +23,38 @@ describe('concat', () => {
 
   it('concats many elements', () => {
     expect(_.concat<any>([1, 1], [2] , [[3]], 4)).toEqual([1, 1, 2, [3], 4]);
+  })
+})
+
+describe('difference', () => {
+  it('returns elements in 1st array but not in the 2nd', () => {
+    expect(
+      _.difference([1, 2, 3, 4, 5], [5, 2, 10])
+    ).toEqual([1, 3, 4])
+  })
+})
+
+describe('flatten', () => {
+  it('default flatten depth is 1', () => {
+    expect(
+      _.flatten([0, [1], [[2]], [3, 4]])
+    ).toEqual([0, 1, [2], 3, 4])
+  })
+
+  it('could flat to deeper', () => {
+    expect(
+      _.flatten([0, [1], [[2]], [3, 4]], 10)
+    ).toEqual([0, 1, 2, 3, 4])
+  })
+})
+
+describe('findIndex', () => {
+  it('returns index of 1st element matchs the callback', () => {
+    expect(_.findIndex([1, 2, 3, 4, 5], x => x > 2)).toEqual(2)
+  })
+
+  it('returns -1 when no matched element', () => {
+    expect(_.findIndex([1, 2, 3, 4, 5], x => x > 10)).toEqual(-1)
   })
 })
 
