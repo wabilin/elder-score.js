@@ -16,6 +16,34 @@ describe('difference', () => {
   })
 })
 
+describe('drop', () => {
+  it('removes first element by default', () => {
+    expect(_.drop([1, 2, 3])).toEqual([2, 3])
+  })
+
+  it('removes first n elements', () => {
+    expect(_.drop([1, 2, 3], 2)).toEqual([3])
+  })
+
+  it('returns [] when n > length', () => {
+    expect(_.drop([1, 2, 3], 8)).toEqual([])
+  })
+})
+
+describe('dropRight', () => {
+  it('removes first element from right by default', () => {
+    expect(_.dropRight([1, 2, 3])).toEqual([1, 2])
+  })
+
+  it('removes first n elements from right', () => {
+    expect(_.dropRight([1, 2, 3], 2)).toEqual([1])
+  })
+
+  it('returns [] when n > length', () => {
+    expect(_.dropRight([1, 2, 3], 8)).toEqual([])
+  })
+})
+
 describe('flatten', () => {
   it('default flatten depth is 1', () => {
     expect(

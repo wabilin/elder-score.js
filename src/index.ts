@@ -38,6 +38,14 @@ const _ = {
     return a.filter(x => !set.has(x));
   },
 
+  drop<T>(a: T[], count: number = 1): T[] {
+    return a.slice(count < 0 ? 0 : count);
+  },
+
+  dropRight<T>(a: T[], count: number = 1): T[] {
+    return a.slice(0, a.length - count);
+  },
+
   // TODO: use Array.prototype.flat when the standard release.
   flatten<T = any>(array: any[], depth: number = 1): T[] {
     return flatDepth(array, depth);
