@@ -1,6 +1,6 @@
-interface FindIndexCallback<T> {
-  (ele: T, index?: number, array?: T[]): boolean
-}
+interface Dict<V> {
+   [key: string]: V;
+};
 
 const flatDepth = (array: any[], depth: number): any[] => {
   return array.reduce((acc, val) => {
@@ -44,6 +44,12 @@ const _ = {
 
   dropRight<T>(a: T[], count: number = 1): T[] {
     return a.slice(0, a.length - count);
+  },
+
+  fromEntries<T>(pairs: [string, T][]): Dict<T> {
+    const obj: Dict<T> = {};
+    pairs.forEach(([key, val]) => { obj[key] = val })
+    return obj;
   },
 
   // TODO: use Array.prototype.flat when the standard release.

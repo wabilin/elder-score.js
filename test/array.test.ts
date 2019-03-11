@@ -44,6 +44,18 @@ describe('dropRight', () => {
   })
 })
 
+describe('fromParis', () => {
+  it('returns {} when given {}', () => {
+    expect(_.fromEntries([])).toEqual({});
+  })
+
+  it('transforms pairs to object', () => {
+    expect(
+      _.fromEntries([['a', 1], ['b', 2]])
+    ).toEqual({a: 1, b: 2});
+  })
+})
+
 describe('flatten', () => {
   it('default flatten depth is 1', () => {
     expect(
