@@ -1,5 +1,5 @@
 {
-  "name": "thindash",
+  "name": "elder-score",
   "version": "0.0.1",
   "description": "Thin lodash-like library in ES6",
   "main": "index.js",
