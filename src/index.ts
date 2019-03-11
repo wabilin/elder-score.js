@@ -1,13 +1,7 @@
-const _ = {
-  concat<T>(...arrays: (T[]|T)[]): T[] {
-    const ary: T[] = [];
-    return ary.concat(...arrays)
-  },
+import array from './array';
 
-  fill<T>(array: T[], value: T, start = 0, end=array.length): T[] {
-    return array.fill(value, start, end);
-  },
+const _ = {
+  ...array,
 };
 
 export default _;
-
