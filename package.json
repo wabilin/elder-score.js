@@ -1,0 +1,11 @@
+{
+  "name": "thindash",
+  "version": "0.0.1",
+  "description": "Thin lodash-like library in ES6",
+  "main": "index.js",
+  "author": "Wabilin",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
+}
