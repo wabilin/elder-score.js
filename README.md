@@ -1,4 +1,4 @@
-# Elder Sroce
+# Elder Score
 
 [![CircleCI](https://circleci.com/gh/wabilin/elder-score.js/tree/master.svg?style=svg)](https://circleci.com/gh/wabilin/elder-score.js/tree/master)
 
