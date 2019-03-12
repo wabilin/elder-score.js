@@ -1,14 +1,14 @@
 {
   "name": "elder-score",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Thin lodash-like library in ES6",
   "main": "dist/_.js",
   "types": "dist/_.d.ts",
   "author": "Wabilin (https://github.com/wabilin)",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/wabilin/elder-score.js.git"
+    "type": "git",
+    "url": "https://github.com/wabilin/elder-score.js.git"
   },
   "scripts": {
     "prepublish": "yarn test && yarn clear && yarn build && yarn ug",
