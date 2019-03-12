@@ -53,7 +53,7 @@
 - [ ] xor
 - [ ] xorBy
 - [ ] xorWith
-- [ ] zip
+- [x] zip
 - [ ] zipObject
 - [ ] zipObjectDeep
 - [ ] zipWith
@@ -176,22 +176,21 @@
 
 ## Math
 
-- [ ]add
-- [ ]ceil
-- [ ]divide
-- [ ]floor
-- [ ]max
-- [ ]maxBy
-- [ ]mean
-- [ ]meanBy
-- [ ]min
-- [ ]minBy
-- [ ]multiply
-- [ ]round
-- [ ]subtract
-- [ ]sum
-- [ ]sumBy
-- [ ]
+- [ ] add
+- [ ] ceil
+- [ ] divide
+- [ ] floor
+- [x] max
+- [ ] maxBy
+- [ ] mean
+- [ ] meanBy
+- [ ] min
+- [ ] minBy
+- [ ] multiply
+- [ ] round
+- [ ] subtract
+- [ ] sum
+- [ ] sumBy
 
 ## Number
 
