@@ -3,7 +3,7 @@
 ## Array
 - [ ] chunk
 - [x] compact
-~~ - [ ] concat~~
+- [ ] <del>concat</del>
 - [x] difference
 - [ ] differenceBy
 - [ ] differenceWith
@@ -12,12 +12,12 @@
 - [ ] dropRightWhile
 - [ ] dropWhile
 - [ ] fill
-~~- [ ] findIndex~~
+- [ ] <del>findIndex</del>
 - [ ] findLastIndex
 - [ ] first -> head
 - [x] flatten
-~~- [ ] flattenDeep~~
-~~- [ ] flattenDepth~~
+- [ ] <del>flattenDeep~~</del>
+- [ ] <del>flattenDepth~~</del>
 - [x] fromPairs (fromEntries)
 - [ ] head
 - [ ] indexOf
