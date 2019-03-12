@@ -1,4 +1,4 @@
-import _ from '../src/index';
+import _ from '../src/_';
 
 describe('isArguments', () => {
   it ('returns false when give other types', () => {

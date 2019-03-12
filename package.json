@@ -9,7 +9,7 @@
     "tsc": "tsc",
     "lint": "tslint src",
     "test": "jest",
-    "ug": "uglifyjs dist/index.js --source-map -m -o dist/index.min.js"
+    "ug": "uglifyjs dist/_.js --source-map -m -o dist/_.min.js"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

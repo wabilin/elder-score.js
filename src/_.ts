@@ -1,5 +1,5 @@
 interface Dict<V> {
-   [key: string]: V;
+  [key: string]: V;
 };
 
 const flatDepth = (array: any[], depth: number): any[] => {

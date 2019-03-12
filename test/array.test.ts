@@ -1,4 +1,4 @@
-import _ from '../src'
+import _ from '../src/_';
 
 describe('compact', () => {
   it('remove all falsy values', () => {
