@@ -73,6 +73,20 @@ const _ = {
   uniq<T> (array: T[]): T[] {
     return [...new Set(array)];
   },
+
+  zip<T> (...arrays: T[][]): (T|undefined)[][] {
+    const len = _.max(arrays.map(x => x.length));
+    const zipped = [];
+    for (let i = 0; i < len; i += 1) {
+      zipped.push(arrays.map(array => array[i]));
+    }
+    return zipped;
+  },
+
+  // TODO: Add test
+  max (array: number[]): number {
+    return Math.max(...array);
+  },
 };
 
 export default _;

@@ -102,3 +102,21 @@ describe('uniq', () => {
     expect(_.uniq([5, 5, 6, 6])).toEqual([5, 6]);
   });
 });
+
+describe('zip', () => {
+  it('zip arrays having the same length', () => {
+    expect(
+      _.zip(['a', 'b', 'c'], ['1', '2', '3']),
+    ).toEqual([['a', '1'], ['b', '2'], ['c', '3']]);
+  });
+});
+
+describe('max', () => {
+  it('returns the max number in array', () => {
+    expect(_.max([1, 3, 2, 4, 5, -1])).toEqual(5);
+  });
+
+  it('returns -Infinity when given empty array', () => {
+    expect(_.max([])).toEqual(-Infinity);
+  });
+});
