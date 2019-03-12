@@ -3,7 +3,6 @@
 ## Array
 - [ ] chunk
 - [x] compact
-- [ ] <del>concat</del>
 - [x] difference
 - [ ] differenceBy
 - [ ] differenceWith
@@ -11,24 +10,18 @@
 - [x] dropRight
 - [ ] dropRightWhile
 - [ ] dropWhile
-- [ ] fill
-- [ ] <del>findIndex</del>
 - [ ] findLastIndex
 - [ ] first -> head
 - [x] flatten
-- [ ] <del>flattenDeep~~</del>
-- [ ] <del>flattenDepth~~</del>
+- [ ] <del>flattenDeep</del>
+- [ ] <del>flattenDepth</del>
 - [x] fromPairs (fromEntries)
 - [ ] head
-- [ ] indexOf
 - [ ] initial
 - [ ] intersection
 - [ ] intersectionBy
 - [ ] intersectionWith
-- [ ] join
 - [x] last
-- [ ] lastIndexOf
-- [ ] nth
 - [ ] pull
 - [ ] pullAll
 - [ ] pullAllBy
@@ -36,7 +29,6 @@
 - [ ] pullAt
 - [ ] remove
 - [ ] reverse
-- [ ] slice
 - [ ] sortedIndex
 - [ ] sortedIndexBy
 - [ ] sortedIndexOf
