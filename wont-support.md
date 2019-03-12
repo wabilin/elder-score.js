@@ -19,4 +19,5 @@ _.join(['a', 'b', 'c'], '~'); // lodash
 - join
 - nth
 - slice
+- reverse
 

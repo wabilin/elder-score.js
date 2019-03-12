@@ -28,7 +28,6 @@
 - [ ] pullAllWith
 - [ ] pullAt
 - [ ] remove
-- [ ] reverse
 - [ ] sortedIndex
 - [ ] sortedIndexBy
 - [ ] sortedIndexOf

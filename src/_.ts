@@ -61,6 +61,18 @@ const _ = {
   last<T>(array: T[]): T|undefined {
     return array[array.length - 1];
   },
+
+  take<T> (array: T[], n: number = 1): T[] {
+    return array.slice(0, n);
+  },
+
+  union<T> (array: T[], ...rest: T[][]): T[] {
+    return _.uniq(array.concat(...rest));
+  },
+
+  uniq<T> (array: T[]): T[] {
+    return [...new Set(array)];
+  },
 };
 
 export default _;

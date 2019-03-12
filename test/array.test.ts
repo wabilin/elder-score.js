@@ -79,3 +79,26 @@ describe('last', () => {
     expect(_.last([1, 2, 3])).toBe(3);
   });
 });
+
+describe('take', () => {
+  it('takes [1st-element] by default', () => {
+    expect(_.take([1, 2, 3])).toEqual([1]);
+  });
+
+  it('takes the first n elements', () => {
+    expect(_.take([1, 2, 3, 4], 3)).toEqual([1, 2, 3]);
+    expect(_.take([1, 2, 3, 4], 0)).toEqual([]);
+  });
+});
+
+describe('union', () => {
+  it('creates an array of unique values', () => {
+    expect(_.union([1 , 2], [2, 3], [1, 3, 5])).toEqual([1, 2, 3, 5]);
+  });
+});
+
+describe('uniq', () => {
+  it('creates a duplicate-free version of an array', () => {
+    expect(_.uniq([5, 5, 6, 6])).toEqual([5, 6]);
+  });
+});
