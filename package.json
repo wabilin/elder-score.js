@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
-    "lint": "tslint src",
+    "lint": "tslint src/* test/*",
     "test": "jest",
     "ug": "uglifyjs dist/_.js --source-map -m -o dist/_.min.js"
   },

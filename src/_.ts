@@ -1,16 +1,17 @@
 interface Dict<V> {
   [key: string]: V;
-};
+}
 
 const flatDepth = (array: any[], depth: number): any[] => {
-  return array.reduce((acc, val) => {
-    if (depth > 1 && Array.isArray(val)) {
-      return acc.concat(flatDepth(val, depth - 1))
-    } else {
-      return acc.concat(val)
-    }
-  }, []);
-}
+  return array.reduce(
+    (acc, val) => {
+      if (depth > 1 && Array.isArray(val)) {
+        return acc.concat(flatDepth(val, depth - 1));
+      }
+      return acc.concat(val);
+    },
+    []);
+};
 
 const _ = {
   isArguments(x: unknown) {
@@ -26,7 +27,7 @@ const _ = {
   },
 
   isObjectLike(x: unknown): x is object {
-    return typeof x === 'object' && x !== null
+    return typeof x === 'object' && x !== null;
   },
 
   compact<T>(elements: T[]): T[] {
@@ -34,7 +35,7 @@ const _ = {
   },
 
   difference<T>(a: T[], b: T[]): T[] {
-    const set = new Set(b)
+    const set = new Set(b);
     return a.filter(x => !set.has(x));
   },
 
@@ -48,7 +49,7 @@ const _ = {
 
   fromEntries<T>(pairs: [string, T][]): Dict<T> {
     const obj: Dict<T> = {};
-    pairs.forEach(([key, val]) => { obj[key] = val })
+    pairs.forEach(([key, val]) => { obj[key] = val; });
     return obj;
   },
 
@@ -59,7 +60,7 @@ const _ = {
 
   last<T>(array: T[]): T|undefined {
     return array[array.length - 1];
-  }
+  },
 };
 
 export default _;
