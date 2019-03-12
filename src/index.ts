@@ -56,6 +56,10 @@ const _ = {
   flatten<T = any>(array: any[], depth: number = 1): T[] {
     return flatDepth(array, depth);
   },
+
+  last<T>(array: T[]): T|undefined {
+    return array[array.length - 1];
+  }
 };
 
 export default _;

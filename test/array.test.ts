@@ -69,3 +69,13 @@ describe('flatten', () => {
     ).toEqual([0, 1, 2, 3, 4])
   })
 })
+
+describe('last', () => {
+  it('returns undefined is array is empty', () => {
+    expect(_.last([])).toBe(undefined);
+  })
+
+  it('returns last element of array', () => {
+    expect(_.last([1, 2, 3])).toBe(3);
+  })
+})
