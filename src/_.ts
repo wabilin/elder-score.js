@@ -13,13 +13,22 @@ const flatDepth = (array: any[], depth: number): any[] => {
     []);
 };
 
+const { assign, entries, keys, values } = Object;
+const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
+const { isArray } = Array;
+
 const _ = {
+  // functions from Object
+  assign, entries, keys, values,
+
+  // functions from Number
+  isInteger, isNaN, isFinite, isSafeInteger,
+
+  // functions from Array
+  isArray,
+
   isArguments(x: unknown) {
     return _.isObjectLike(x) && x.toString() === '[object Arguments]';
-  },
-
-  isArray(x: unknown) {
-    return Array.isArray(x);
   },
 
   isBoolean(x: unknown): x is boolean {
@@ -83,7 +92,6 @@ const _ = {
     return zipped;
   },
 
-  // TODO: Add test
   max (array: number[]): number {
     return Math.max(...array);
   },
