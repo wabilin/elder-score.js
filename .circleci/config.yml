@@ -19,7 +19,7 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: yarn test
+          command: yarn test --coverage
       - run:
           name: lint
           command: yarn lint
