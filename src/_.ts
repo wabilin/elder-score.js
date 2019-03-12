@@ -89,4 +89,8 @@ const _ = {
   },
 };
 
+if (module) {
+  module.exports = _;
+}
+
 export default _;
