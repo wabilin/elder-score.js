@@ -37,14 +37,14 @@
 - [ ] sortedUniq
 - [ ] sortedUniqBy
 - [ ] tail
-- [ ] take
+- [x] take
 - [ ] takeRight
 - [ ] takeRightWhile
 - [ ] takeWhile
-- [ ] union
+- [x] union
 - [ ] unionBy
 - [ ] unionWith
-- [ ] uniq
+- [x] uniq
 - [ ] uniqBy
 - [ ] uniqWith
 - [ ] unzip
