@@ -19,9 +19,11 @@ const { isArray } = Array;
 
 const _ = {
   // functions from Object
+  // TODO: Add to Spec
   assign, entries, keys, values,
 
   // functions from Number
+  // TODO: Add to Spec
   isInteger, isNaN, isFinite, isSafeInteger,
 
   // functions from Array
