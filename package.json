@@ -1,6 +1,6 @@
 {
   "name": "elder-score",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Thin lodash-like library in ES6",
   "main": "dist/_.js",
   "types": "dist/_.d.ts",
