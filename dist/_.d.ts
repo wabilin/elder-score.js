@@ -4,6 +4,8 @@ interface Dict<V> {
 declare const _: {
     head: <T>(array: T[], n?: number | undefined) => T | T[];
     tail: <T>(array: T[], index?: number) => T[];
+    drop: <T>(array: T[], index?: number) => T[];
+    dropRight: <T>(array: T[], n?: number) => T[];
     assign: {
         <T, U>(target: T, source: U): T & U;
         <T, U, V>(target: T, source1: U, source2: V): T & U & V;
@@ -33,8 +35,6 @@ declare const _: {
     isObjectLike(x: unknown): x is object;
     compact<T>(elements: T[]): T[];
     difference<T>(a: T[], b: T[]): T[];
-    drop<T>(a: T[], count?: number): T[];
-    dropRight<T>(a: T[], count?: number): T[];
     fromEntries<T>(pairs: [string, T][]): Dict<T>;
     flatten<T = any>(array: any[], depth?: number): T[];
     first<T>(array: T[], n?: number | undefined): T | T[];

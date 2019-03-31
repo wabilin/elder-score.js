@@ -16,34 +16,6 @@ describe('difference', () => {
   });
 });
 
-describe('drop', () => {
-  it('removes first element by default', () => {
-    expect(_.drop([1, 2, 3])).toEqual([2, 3]);
-  });
-
-  it('removes first n elements', () => {
-    expect(_.drop([1, 2, 3], 2)).toEqual([3]);
-  });
-
-  it('returns [] when n > length', () => {
-    expect(_.drop([1, 2, 3], 8)).toEqual([]);
-  });
-});
-
-describe('dropRight', () => {
-  it('removes first element from right by default', () => {
-    expect(_.dropRight([1, 2, 3])).toEqual([1, 2]);
-  });
-
-  it('removes first n elements from right', () => {
-    expect(_.dropRight([1, 2, 3], 2)).toEqual([1]);
-  });
-
-  it('returns [] when n > length', () => {
-    expect(_.dropRight([1, 2, 3], 8)).toEqual([]);
-  });
-});
-
 describe('fromParis', () => {
   it('returns {} when given {}', () => {
     expect(_.fromEntries([])).toEqual({});
@@ -96,6 +68,10 @@ describe('initial', () => {
       _.initial([1, 2, 3], 2),
     ).toEqual([1]);
   });
+
+  it('returns [] when n > length', () => {
+    expect(_.initial([1, 2, 3], 8)).toEqual([]);
+  });
 });
 
 describe('intersection', () => {
@@ -137,8 +113,11 @@ describe('rest', () => {
     expect(_.rest([1, 2, 3, 4])).toEqual([2, 3, 4]);
   });
 
-  it('return the values of the array from that index onward when given index', () => {
+  it('removes first n elements', () => {
     expect(_.rest([1, 2, 3, 4], 2)).toEqual([3, 4]);
+  });
+  it('returns [] when n > length', () => {
+    expect(_.rest([1, 2, 3], 8)).toEqual([]);
   });
 });
 

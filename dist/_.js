@@ -37,12 +37,6 @@ const e = {
         const set = new Set(b);
         return a.filter(x => !set.has(x));
     },
-    drop(a, count = 1) {
-        return a.slice(count < 0 ? 0 : count);
-    },
-    dropRight(a, count = 1) {
-        return a.slice(0, a.length - count);
-    },
     fromEntries(pairs) {
         const obj = {};
         pairs.forEach(([key, val]) => { obj[key] = val; });
@@ -95,7 +89,7 @@ const e = {
     },
 };
 // alias
-const _ = Object.assign({}, e, { head: e.first, tail: e.rest });
+const _ = Object.assign({}, e, { head: e.first, tail: e.rest, drop: e.rest, dropRight: e.initial });
 if (module) {
     module.exports = _;
 }
