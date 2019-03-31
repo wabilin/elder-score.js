@@ -51,14 +51,6 @@ const e = {
     return a.filter(x => !set.has(x));
   },
 
-  drop<T>(a: T[], count: number = 1): T[] {
-    return a.slice(count < 0 ? 0 : count);
-  },
-
-  dropRight<T>(a: T[], count: number = 1): T[] {
-    return a.slice(0, a.length - count);
-  },
-
   fromEntries<T>(pairs: [string, T][]): Dict<T> {
     const obj: Dict<T> = {};
     pairs.forEach(([key, val]) => { obj[key] = val; });
@@ -127,6 +119,8 @@ const _ = {
   ...e,
   head: e.first,
   tail: e.rest,
+  drop: e.rest,
+  dropRight: e.initial,
 };
 
 export default _;

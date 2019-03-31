@@ -4,10 +4,8 @@
 - [ ] chunk
 - [x] compact
 - [x] difference
-- [ ] differenceBy
-- [ ] differenceWith
-- [x] drop
-- [x] dropRight
+- [x] drop -> rest
+- [x] dropRight -> initial
 - [ ] dropRightWhile
 - [ ] dropWhile
 - [ ] findLastIndex
