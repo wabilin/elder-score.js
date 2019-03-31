@@ -1,9 +1,10 @@
 {
-    "defaultSeverity": "error",
-    "extends": ["tslint-microsoft-contrib/recommended"],
-    "jsRules": {},
+  "defaultSeverity": "error",
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "extends": ["tslint-microsoft-contrib/recommended"],
+  "jsRules": {},
   "rules": {
     "underscore-consistent-invocation": false
   },
-    "rulesDirectory": []
+  "rulesDirectory": []
 }
