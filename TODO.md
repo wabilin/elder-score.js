@@ -20,7 +20,7 @@
 - [x] take
 - [x] union
 - [x] uniq
-- [ ] unzip
+- [x] unzip
 - [x] without
 - [x] zip
 
@@ -172,7 +172,7 @@
 - [ ] matcher
 - [ ] isEqual
 - [ ] isMatch
-- [ ] isEmpty
+- [x] isEmpty
 - [ ] isElement
 
 

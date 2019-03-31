@@ -32,6 +32,7 @@ declare const _: {
     isArray: (arg: any) => arg is any[];
     isArguments(x: unknown): boolean;
     isBoolean(x: unknown): x is boolean;
+    isEmpty<T>(x: object | T[] | null | undefined): boolean;
     isObjectLike(x: unknown): x is object;
     compact<T>(elements: T[]): T[];
     difference<T>(a: T[], b: T[]): T[];
@@ -43,6 +44,7 @@ declare const _: {
     last<T>(array: T[], n?: number | undefined): T | T[] | undefined;
     rest<T>(array: T[], index?: number): T[];
     take<T>(array: T[], n?: number): T[];
+    unzip<T>(arrays: T[][]): T[][];
     without<T>(array: T[], ...values: T[]): T[];
     union<T>(array: T[], ...rest: T[][]): T[];
     uniq<T>(array: T[]): T[];
