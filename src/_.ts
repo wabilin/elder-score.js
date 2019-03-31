@@ -20,11 +20,9 @@ const { isArray } = Array;
 // e for Elder Score
 const e = {
   // functions from Object
-  // TODO: Add to Spec
   assign, entries, keys, values,
 
   // functions from Number
-  // TODO: Add to Spec
   isInteger, isNaN, isFinite, isSafeInteger,
 
   // functions from Array
@@ -40,7 +38,9 @@ const e = {
 
   isEmpty<T>(x: null|undefined|object|T[]): boolean {
     if (x == null) { return true; }
-    if (_.isArray(x)) { return (x as T[]).length === 0; }
+    if (_.isArray(x)) {
+      return (<T[]>x).length === 0;
+    }
     return _.isEmpty(keys(x));
   },
 
@@ -68,7 +68,7 @@ const e = {
     return obj;
   },
 
-  // TODO: use Array.prototype.flat when the standard release.
+  // NOTE: use Array.prototype.flat when the standard release.
   flatten<T = any>(array: any[], depth: number = 1): T[] {
     return flatDepth(array, depth);
   },
@@ -78,7 +78,7 @@ const e = {
   },
 
   initial<T>(array: T[], n: number = 1): T[] {
-    return _.first(array, array.length - n) as T[];
+    return <T[]>(_.first(array, array.length - n));
   },
 
   intersection<T>(...arrays: T[][]): T[] {
