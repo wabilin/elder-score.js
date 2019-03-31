@@ -70,13 +70,75 @@ describe('flatten', () => {
   });
 });
 
+describe('first', () => {
+  it('returns the first element by default', () => {
+    expect(
+      _.first([1, 2, 3]),
+    ).toEqual(1);
+  });
+
+  it('returns the first n elements when given n', () => {
+    expect(
+      _.first([1, 2, 3], 2),
+    ).toEqual([1, 2]);
+  });
+});
+
+describe('initial', () => {
+  it('returns an array without last entry by default', () => {
+    expect(
+      _.initial([1, 2, 3]),
+    ).toEqual([1, 2]);
+  });
+
+  it('returns an array without last n entry when given n', () => {
+    expect(
+      _.initial([1, 2, 3], 2),
+    ).toEqual([1]);
+  });
+});
+
+describe('intersection', () => {
+  it('returns [] when given no arrays', () => {
+    expect(
+      _.intersection(),
+    ).toEqual([]);
+  });
+
+  it('returns uniq(array) when given 1 array', () => {
+    expect(
+      _.intersection([1, 1, 2, 3]),
+    ).toEqual([1, 2, 3]);
+  });
+
+  it('returns intersection of all the arrays', () => {
+    expect(
+      _.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]),
+    ).toEqual([1, 2]);
+  });
+});
+
 describe('last', () => {
   it('returns undefined is array is empty', () => {
     expect(_.last([])).toBe(undefined);
   });
 
-  it('returns last element of array', () => {
+  it('returns last element of array by default', () => {
     expect(_.last([1, 2, 3])).toBe(3);
+  });
+
+  it('returns last n element of array when given n', () => {
+    expect(_.last([1, 2, 3], 2)).toEqual([2, 3]);
+  });
+});
+
+describe('rest', () => {
+  it('returns the rest of the elements in an array.', () => {
+    expect(_.rest([1, 2, 3, 4])).toEqual([2, 3, 4]);
+  });
+
+  it('return the values of the array from that index onward when given index', () => {
+    expect(_.rest([1, 2, 3, 4], 2)).toEqual([3, 4]);
   });
 });
 

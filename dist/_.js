@@ -8,12 +8,21 @@ const flatDepth = (array, depth) => {
         return acc.concat(val);
     }, []);
 };
-const _ = {
+const { assign, entries, keys, values } = Object;
+const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
+const { isArray } = Array;
+// e for Elder Score
+const e = {
+    // functions from Object
+    // TODO: Add to Spec
+    assign, entries, keys, values,
+    // functions from Number
+    // TODO: Add to Spec
+    isInteger, isNaN, isFinite, isSafeInteger,
+    // functions from Array
+    isArray,
     isArguments(x) {
         return _.isObjectLike(x) && x.toString() === '[object Arguments]';
-    },
-    isArray(x) {
-        return Array.isArray(x);
     },
     isBoolean(x) {
         return x === true || x === false;
@@ -43,8 +52,26 @@ const _ = {
     flatten(array, depth = 1) {
         return flatDepth(array, depth);
     },
-    last(array) {
-        return array[array.length - 1];
+    first(array, n) {
+        return n ? array.slice(0, n) : array[0];
+    },
+    initial(array, n = 1) {
+        return _.first(array, array.length - n);
+    },
+    intersection(...arrays) {
+        if (arrays.length === 0) {
+            return [];
+        }
+        const head = [...(new Set(arrays[0]))];
+        const sets = _.rest(arrays).map(x => new Set(x));
+        return head.filter(x => sets.every(set => set.has(x)));
+    },
+    last(array, n) {
+        const { length } = array;
+        return n ? array.slice(length - n) : array[length - 1];
+    },
+    rest(array, index = 1) {
+        return array.slice(index);
     },
     take(array, n = 1) {
         return array.slice(0, n);
@@ -63,11 +90,12 @@ const _ = {
         }
         return zipped;
     },
-    // TODO: Add test
     max(array) {
         return Math.max(...array);
     },
 };
+// alias
+const _ = Object.assign({}, e, { head: e.first, tail: e.rest });
 if (module) {
     module.exports = _;
 }

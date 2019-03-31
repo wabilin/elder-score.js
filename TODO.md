@@ -11,36 +11,17 @@
 - [ ] dropRightWhile
 - [ ] dropWhile
 - [ ] findLastIndex
-- [ ] first -> head
+- [x] first -> head
 - [x] flatten
-- [ ] <del>flattenDeep</del>
-- [ ] <del>flattenDepth</del>
 - [x] fromPairs (fromEntries)
-- [ ] head
-- [ ] initial
-- [ ] intersection
-- [ ] intersectionBy
-- [ ] intersectionWith
+- [x] head
+- [x] initial
+- [x] intersection
 - [x] last
-- [ ] pull
-- [ ] pullAll
-- [ ] pullAllBy
-- [ ] pullAllWith
-- [ ] pullAt
-- [ ] remove
+- [x] rest
 - [ ] sortedIndex
-- [ ] sortedIndexBy
-- [ ] sortedIndexOf
-- [ ] sortedLastIndex
-- [ ] sortedLastIndexBy
-- [ ] sortedLastIndexOf
-- [ ] sortedUniq
-- [ ] sortedUniqBy
-- [ ] tail
+- [x] tail -> rest
 - [x] take
-- [ ] takeRight
-- [ ] takeRightWhile
-- [ ] takeWhile
 - [x] union
 - [ ] unionBy
 - [ ] unionWith
@@ -61,8 +42,8 @@
 ## Collection
 
 - [ ] countBy
-- [ ] each -> forEach
-- [ ] eachRight -> forEachRight
+- [ ] <del>each</del>
+- [ ] eachRight
 - [ ] every
 - [ ] filter
 - [ ] find

@@ -17,7 +17,8 @@ const { assign, entries, keys, values } = Object;
 const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
 const { isArray } = Array;
 
-const _ = {
+// e for Elder Score
+const e = {
   // functions from Object
   // TODO: Add to Spec
   assign, entries, keys, values,
@@ -69,8 +70,30 @@ const _ = {
     return flatDepth(array, depth);
   },
 
-  last<T>(array: T[]): T|undefined {
-    return array[array.length - 1];
+  first<T>(array: T[], n?: number): T|T[] {
+    return n ? array.slice(0, n) : array[0];
+  },
+
+  initial<T>(array: T[], n: number = 1): T[] {
+    return _.first(array, array.length - n) as T[];
+  },
+
+  intersection<T>(...arrays: T[][]): T[] {
+    if (arrays.length === 0) {
+      return [];
+    }
+    const head = [...(new Set(arrays[0]))];
+    const sets = _.rest(arrays).map(x => new Set(x));
+    return head.filter(x => sets.every(set => set.has(x)));
+  },
+
+  last<T>(array: T[], n?: number): T|T[]|undefined {
+    const { length } = array;
+    return n ? array.slice(length - n) : array[length - 1];
+  },
+
+  rest<T>(array: T[], index: number = 1): T[] {
+    return array.slice(index);
   },
 
   take<T> (array: T[], n: number = 1): T[] {
@@ -97,6 +120,13 @@ const _ = {
   max (array: number[]): number {
     return Math.max(...array);
   },
+};
+
+// alias
+const _ = {
+  ...e,
+  head: e.first,
+  tail: e.rest,
 };
 
 if (module) {
