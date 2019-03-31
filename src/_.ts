@@ -44,6 +44,11 @@ const e = {
     return _.isEmpty(keys(x));
   },
 
+  isObject(x: unknown): x is object {
+    const t = typeof x;
+    return (t === 'object' && !!x) || t === 'function';
+  },
+
   isObjectLike(x: unknown): x is object {
     return typeof x === 'object' && x !== null;
   },

@@ -63,6 +63,39 @@ describe('isEmpty', () => {
   });
 });
 
+describe('isObject', () => {
+  it('null is not object', () => {
+    expect(_.isObject(null)).toBe(false);
+  });
+
+  it('undefined is not object', () => {
+    expect(_.isObject(undefined)).toBe(false);
+  });
+
+  it('number is not object', () => {
+    expect(_.isObject(1)).toBe(false);
+  });
+
+  it('boolean is not object', () => {
+    expect(_.isObject(true)).toBe(false);
+    expect(_.isObject(false)).toBe(false);
+  });
+
+  it('object is object', () => {
+    expect(_.isObject({})).toBe(true);
+    expect(_.isObject({ a: 1 })).toBe(true);
+  });
+
+  it('function is object', () => {
+    expect(_.isObject(() => 1)).toBe(true);
+  });
+
+  it('array is object', () => {
+    expect(_.isObject([])).toBe(true);
+    expect(_.isObject([1, 2, 3])).toBe(true);
+  });
+});
+
 describe('isObjectLike', () => {
   it('returns false when give other types', () => {
     [1, null, undefined, 'string'].forEach((x) => {

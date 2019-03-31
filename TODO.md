@@ -100,7 +100,7 @@
 - [ ] isNil
 - [ ] isNull
 - [ ] isNumber
-- [ ] isObject
+- [x] isObject
 - [x] isObjectLike
 - [ ] isPlainObject
 - [ ] isRegExp
