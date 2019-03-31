@@ -135,9 +135,9 @@ describe('take', () => {
 describe('unzip', () => {
   it('returns unziped array', () => {
     expect(
-      _.unzip([["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]),
+      _.unzip([['moe', 30, true], ['larry', 40, false], ['curly', 50, false]]),
     ).toEqual(
-      [['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]]
+      [['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]],
     );
   });
 });
