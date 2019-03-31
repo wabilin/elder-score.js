@@ -6,8 +6,6 @@
 - [x] difference
 - [x] drop -> rest
 - [x] dropRight -> initial
-- [ ] dropRightWhile
-- [ ] dropWhile
 - [ ] findLastIndex
 - [x] first -> head
 - [x] flatten
@@ -21,36 +19,20 @@
 - [x] tail -> rest
 - [x] take
 - [x] union
-- [ ] unionBy
-- [ ] unionWith
 - [x] uniq
-- [ ] uniqBy
-- [ ] uniqWith
 - [ ] unzip
-- [ ] unzipWith
 - [ ] without
-- [ ] xor
-- [ ] xorBy
-- [ ] xorWith
 - [x] zip
-- [ ] zipObject
-- [ ] zipObjectDeep
-- [ ] zipWith
 
 ## Collection
 
 - [ ] countBy
 - [ ] <del>each</del>
-- [ ] eachRight
 - [ ] every
 - [ ] filter
 - [ ] find
 - [ ] findLast
-- [ ] flatMap
-- [ ] flatMapDeep
-- [ ] flatMapDepth
 - [ ] forEach
-- [ ] forEachRight
 - [ ] groupBy
 - [ ] includes
 - [ ] invokeMap
@@ -62,7 +44,6 @@
 - [ ] reduceRight
 - [ ] reject
 - [ ] sample
-- [ ] sampleSize
 - [ ] shuffle
 - [ ] size
 - [ ] some
@@ -71,27 +52,21 @@
 ## Function
 
 - [ ] after
-- [ ] ary
 - [ ] before
-- [ ] bind
-- [ ] bindKey
+- [ ] <del>bind</del>
+- [ ] bindAll
 - [ ] curry
 - [ ] curryRight
 - [ ] debounce
 - [ ] defer
 - [ ] delay
-- [ ] flip
 - [ ] memoize
 - [ ] negate
 - [ ] once
-- [ ] overArgs
 - [ ] partial
 - [ ] partialRight
-- [ ] rearg
-- [ ] rest
-- [ ] spread
+- [ ] restArguments
 - [ ] throttle
-- [ ] unary
 - [ ] wrap
 
 ## Lang
@@ -113,17 +88,12 @@
 - [x] isBoolean
 - [ ] isBuffer
 - [ ] isDate
-- [ ] isElement
-- [ ] isEmpty
-- [ ] isEqual
-- [ ] isEqualWith
 - [ ] isError
 - [ ] isFinite
 - [ ] isFunction
 - [ ] isInteger
 - [ ] isLength
 - [ ] isMap
-- [ ] isMatch
 - [ ] isMatchWith
 - [ ] isNaN
 - [ ] isNative
@@ -178,137 +148,51 @@
 - [ ] random
 
 ## Object
-
-- [ ] assign
-- [ ] assignIn
-- [ ] assignInWith
-- [ ] assignWith
-- [ ] at
-- [ ] create
-- [ ] defaults
-- [ ] defaultsDeep
-- [ ] entries -> toPairs
-- [ ] entriesIn -> toPairsIn
-- [ ] extend -> assignIn
-- [ ] extendWith -> assignInWith
-- [ ] findKey
-- [ ] findLastKey
-- [ ] forIn
-- [ ] forInRight
-- [ ] forOwn
-- [ ] forOwnRight
-- [ ] functions
-- [ ] functionsIn
-- [ ] get
-- [ ] has
-- [ ] hasIn
-- [ ] invert
-- [ ] invertBy
-- [ ] invoke
 - [ ] keys
-- [ ] keysIn
-- [ ] mapKeys
-- [ ] mapValues
-- [ ] merge
-- [ ] mergeWith
-- [ ] omit
-- [ ] omitBy
-- [ ] pick
-- [ ] pickBy
-- [ ] result
-- [ ] set
-- [ ] setWith
-- [ ] toPairs
-- [ ] toPairsIn
-- [ ] transform
-- [ ] unset
-- [ ] update
-- [ ] updateWith
+- [ ] allKeys
+- [x] assign
 - [ ] values
-- [ ] valuesIn
-
-## Seq
-
-- [ ] chain
+- [ ] mapObject
+- [x] entries
+- [ ] pairs -> entries
+- [ ] invert
+- [ ] create
+- [ ] functions
+- [ ] findKey
+- [ ] extend
+- [ ] extendOwn
+- [ ] pick
+- [ ] omit
+- [ ] defaults
+- [ ] clone
 - [ ] tap
-- [ ] thru
-- [ ] prototype[Symbol.iterator]
-- [ ] prototype.at
-- [ ] prototype.chain
-- [ ] prototype.commit
-- [ ] prototype.next
-- [ ] prototype.plant
-- [ ] prototype.reverse
-- [ ] prototype.toJSON -> value
-- [ ] prototype.value
-- [ ] prototype.valueOf -> value
-
-## String
-
-- [ ] camelCase
-- [ ] capitalize
-- [ ] deburr
-- [ ] endsWith
-- [ ] escape
-- [ ] escapeRegExp
-- [ ] kebabCase
-- [ ] lowerCase
-- [ ] lowerFirst
-- [ ] pad
-- [ ] padEnd
-- [ ] padStart
-- [ ] parseInt
-- [ ] camelCase
-- [ ] capitalize
-- [ ] deburr
-- [ ] endsWith
-- [ ] escape
-- [ ] escapeRegExp
-- [ ] kebabCase
-- [ ] lowerCase
-- [ ] lowerFirst
-- [ ] pad
-- [ ] padEnd
-- [ ] padStart
-- [ ] parseInt
-- [ ] unescape
-- [ ] upperCase
-- [ ] upperFirst
-- [ ] words
-
-## Util
-
-- [ ] attempt
-- [ ] bindAll
-- [ ] cond
-- [ ] conforms
-- [ ] constant
-- [ ] defaultTo
-- [ ] flow
-- [ ] flowRight
-- [ ] identity
-- [ ] iteratee
-- [ ] matches
-- [ ] matchesProperty
-- [ ] method
-- [ ] methodOf
-- [ ] mixin
-- [ ] noConflict
-- [ ] noop
-- [ ] nthArg
-- [ ] over
-- [ ] overEvery
-- [ ] overSome
+- [ ] has
 - [ ] property
 - [ ] propertyOf
-- [ ] range
-- [ ] rangeRight
-- [ ] runInContext
-- [ ] stubArray
-- [ ] stubFalse
-- [ ] stubObject
-- [ ] stubString
-- [ ] stubTrue
+- [ ] matcher
+- [ ] isEqual
+- [ ] isMatch
+- [ ] isEmpty
+- [ ] isElement
+
+
+## Chain
+
+- [ ] chain
+- [ ] value
+
+## Util
+- [ ] noConflict
+- [ ] identity
+- [ ] constant
+- [ ] noop
 - [ ] times
-- [ ] toPath
+- [ ] random
+- [ ] mixin
+- [ ] iteratee
 - [ ] uniqueId
+- [ ] escape
+- [ ] unescape
+- [ ] result
+- [ ] now
+- [ ] template
