@@ -27,6 +27,15 @@ const e = {
     isBoolean(x) {
         return x === true || x === false;
     },
+    isEmpty(x) {
+        if (x == null) {
+            return true;
+        }
+        if (_.isArray(x)) {
+            return x.length === 0;
+        }
+        return _.isEmpty(keys(x));
+    },
     isObjectLike(x) {
         return typeof x === 'object' && x !== null;
     },
@@ -53,7 +62,7 @@ const e = {
         return _.first(array, array.length - n);
     },
     intersection(...arrays) {
-        if (arrays.length === 0) {
+        if (_.isEmpty(arrays)) {
             return [];
         }
         const head = [...(new Set(arrays[0]))];
@@ -69,6 +78,12 @@ const e = {
     },
     take(array, n = 1) {
         return array.slice(0, n);
+    },
+    unzip(arrays) {
+        if (_.isEmpty(arrays)) {
+            return [];
+        }
+        return arrays[0].map((e, i) => arrays.map(array => array[i]));
     },
     without(array, ...values) {
         return _.difference(array, values);

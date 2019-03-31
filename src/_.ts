@@ -38,6 +38,12 @@ const e = {
     return x === true || x === false;
   },
 
+  isEmpty<T>(x: null|undefined|object|T[]): boolean {
+    if (x == null) { return true; }
+    if (_.isArray(x)) { return (x as T[]).length === 0; }
+    return _.isEmpty(keys(x));
+  },
+
   isObjectLike(x: unknown): x is object {
     return typeof x === 'object' && x !== null;
   },
@@ -71,9 +77,8 @@ const e = {
   },
 
   intersection<T>(...arrays: T[][]): T[] {
-    if (arrays.length === 0) {
-      return [];
-    }
+    if (_.isEmpty(arrays)) { return []; }
+
     const head = [...(new Set(arrays[0]))];
     const sets = _.rest(arrays).map(x => new Set(x));
     return head.filter(x => sets.every(set => set.has(x)));
@@ -90,6 +95,12 @@ const e = {
 
   take<T> (array: T[], n: number = 1): T[] {
     return array.slice(0, n);
+  },
+
+  unzip<T>(arrays: T[][]): T[][] {
+    if (_.isEmpty(arrays)) { return []; }
+
+    return arrays[0].map((e, i) => arrays.map(array => array[i]));
   },
 
   without<T>(array: T[], ...values: T[]): T[] {

@@ -132,6 +132,16 @@ describe('take', () => {
   });
 });
 
+describe('unzip', () => {
+  it('returns unziped array', () => {
+    expect(
+      _.unzip([["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]),
+    ).toEqual(
+      [['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]]
+    );
+  });
+});
+
 describe('without', () => {
   it('returns a copy of the array with all instances of the values removed.', () => {
     expect(

@@ -37,6 +37,32 @@ describe('isBoolean', () => {
   });
 });
 
+describe('isEmpty', () => {
+  it('null is empty', () => {
+    expect(_.isEmpty(null)).toBe(true);
+  });
+
+  it('undefined is empty', () => {
+    expect(_.isEmpty(undefined)).toBe(true);
+  });
+
+  it('empty array is empty', () => {
+    expect(_.isEmpty([])).toBe(true);
+  });
+
+  it('array having elements is not empty', () => {
+    expect(_.isEmpty([1, 2, 3])).toBe(false);
+  });
+
+  it('empty object is empty', () => {
+    expect(_.isEmpty({})).toBe(true);
+  });
+
+  it('object having elements is not empty', () => {
+    expect(_.isEmpty({ a: 1 , b: 2 })).toBe(false);
+  });
+});
+
 describe('isObjectLike', () => {
   it('returns false when give other types', () => {
     [1, null, undefined, 'string'].forEach((x) => {
