@@ -43,6 +43,7 @@ declare const _: {
     last<T>(array: T[], n?: number | undefined): T | T[] | undefined;
     rest<T>(array: T[], index?: number): T[];
     take<T>(array: T[], n?: number): T[];
+    without<T>(array: T[], ...values: T[]): T[];
     union<T>(array: T[], ...rest: T[][]): T[];
     uniq<T>(array: T[]): T[];
     zip<T>(...arrays: T[][]): (T | undefined)[][];
