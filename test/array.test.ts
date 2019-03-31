@@ -132,6 +132,14 @@ describe('take', () => {
   });
 });
 
+describe('without', () => {
+  it('returns a copy of the array with all instances of the values removed.', () => {
+    expect(
+      _.without([1, 2, 1, 0, 3, 1, 4], 0, 1),
+    ).toEqual([2, 3, 4]);
+  });
+});
+
 describe('union', () => {
   it('creates an array of unique values', () => {
     expect(_.union([1 , 2], [2, 3], [1, 3, 5])).toEqual([1, 2, 3, 5]);
