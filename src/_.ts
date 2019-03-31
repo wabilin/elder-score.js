@@ -92,6 +92,10 @@ const e = {
     return array.slice(0, n);
   },
 
+  without<T>(array: T[], ...values: T[]): T[] {
+    return _.difference(array, values);
+  },
+
   union<T> (array: T[], ...rest: T[][]): T[] {
     return _.uniq(array.concat(...rest));
   },

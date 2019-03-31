@@ -70,6 +70,9 @@ const e = {
     take(array, n = 1) {
         return array.slice(0, n);
     },
+    without(array, ...values) {
+        return _.difference(array, values);
+    },
     union(array, ...rest) {
         return _.uniq(array.concat(...rest));
     },
@@ -90,8 +93,5 @@ const e = {
 };
 // alias
 const _ = Object.assign({}, e, { head: e.first, tail: e.rest, drop: e.rest, dropRight: e.initial });
-if (module) {
-    module.exports = _;
-}
 exports.default = _;
 //# sourceMappingURL=_.js.map

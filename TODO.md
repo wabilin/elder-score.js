@@ -21,7 +21,7 @@
 - [x] union
 - [x] uniq
 - [ ] unzip
-- [ ] without
+- [x] without
 - [x] zip
 
 ## Collection
