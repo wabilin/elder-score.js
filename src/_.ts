@@ -129,8 +129,4 @@ const _ = {
   tail: e.rest,
 };
 
-if (module) {
-  module.exports = _;
-}
-
 export default _;
