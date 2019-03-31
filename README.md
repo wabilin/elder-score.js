@@ -1,6 +1,8 @@
 # Elder Score
 
 [![CircleCI](https://circleci.com/gh/wabilin/elder-score.js/tree/master.svg?style=svg)](https://circleci.com/gh/wabilin/elder-score.js/tree/master)
+[![codecov](https://codecov.io/gh/wabilin/elder-score.js/branch/master/graph/badge.svg)](https://codecov.io/gh/wabilin/elder-score.js)
+
 
 A lightweight, underscore/lodash like libray.
 Use ES6 standard to minimize package size. (Do not support ES5)
