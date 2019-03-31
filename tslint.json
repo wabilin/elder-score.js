@@ -1,9 +1,9 @@
 {
     "defaultSeverity": "error",
-    "extends": [
-        "tslint-config-airbnb"
-    ],
+    "extends": ["tslint-microsoft-contrib/recommended"],
     "jsRules": {},
-    "rules": {},
+  "rules": {
+    "underscore-consistent-invocation": false
+  },
     "rulesDirectory": []
 }

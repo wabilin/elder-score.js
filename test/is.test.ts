@@ -1,4 +1,4 @@
-import _ from '../src/_';
+import _ from '_';
 
 describe('isArguments', () => {
   it('returns false when give other types', () => {
@@ -7,6 +7,7 @@ describe('isArguments', () => {
     });
   });
 
+  // tslint:disable-next-line: no-function-expression
   it('returns true when given arguments', function () {
     expect(_.isArguments(arguments)).toBe(true);
   });
