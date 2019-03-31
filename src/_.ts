@@ -49,10 +49,6 @@ const e = {
     return (t === 'object' && !!x) || t === 'function';
   },
 
-  isObjectLike(x: unknown): x is object {
-    return typeof x === 'object' && x !== null;
-  },
-
   compact<T>(elements: T[]): T[] {
     return elements.filter(Boolean);
   },

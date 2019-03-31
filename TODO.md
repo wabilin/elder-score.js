@@ -101,7 +101,6 @@
 - [ ] isNull
 - [ ] isNumber
 - [x] isObject
-- [x] isObjectLike
 - [ ] isPlainObject
 - [ ] isRegExp
 - [ ] isSafeInteger

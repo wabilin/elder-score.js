@@ -95,16 +95,3 @@ describe('isObject', () => {
     expect(_.isObject([1, 2, 3])).toBe(true);
   });
 });
-
-describe('isObjectLike', () => {
-  it('returns false when give other types', () => {
-    [1, null, undefined, 'string'].forEach((x) => {
-      expect(_.isObjectLike(x)).toBe(false);
-    });
-  });
-
-  it('returns true when given boolean', () => {
-    expect(_.isObjectLike({})).toBe(true);
-    expect(_.isObjectLike([])).toBe(true);
-  });
-});
