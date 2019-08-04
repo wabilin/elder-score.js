@@ -20,16 +20,16 @@
     "ug": "uglifyjs dist/_.js --source-map -m -c -o dist/_.min.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@types/jest": "^24.0.11",
+    "@types/jest": "^24.0.16",
     "babel-jest": "^24.3.1",
     "jest": "^24.3.1",
     "ts-jest": "^24.0.0",
-    "tslint": "^5.13.1",
+    "tslint": "^5.18.0",
     "tslint-microsoft-contrib": "^6.1.0",
-    "typescript": "^3.3.3333",
+    "typescript": "^3.5.3",
     "uglify-es": "^3.3.9"
   }
 }
