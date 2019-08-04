@@ -5,7 +5,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/wabilin/elder-score.js/badge)](https://www.codefactor.io/repository/github/wabilin/elder-score.js)
 
 A lightweight, underscore/lodash like libray.
-Use ES6 standard to minimize package size. (Do not support ES5)
+Use ES2017 standard to minimize package size. (Do not support elder ES versions)
 
 ## NOTE
 **This library is still not completed.**

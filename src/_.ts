@@ -13,6 +13,15 @@ const flatDepth = (array: any[], depth: number): any[] => {
     []);
 };
 
+const endIndex = <T>(array: T[]): number => array.length - 1;
+const bSearch = <T>(array: T[], val: T, low: number, high: number): number => {
+  if (low >= high) { return low; }
+
+  const m = Math.floor((low + high) / 2);
+  if (array[m] < val) { return bSearch(array, val, m + 1, high); }
+  return bSearch(array, val, low, m);
+};
+
 const { assign, entries, keys, values } = Object;
 const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
 const { isArray } = Array;
@@ -81,6 +90,14 @@ const e = {
     return <T[]>(_.first(array, array.length - n));
   },
 
+  findLastIndex<T>(array: T[], predicate: (ele: T) => boolean): number {
+    for (let i = endIndex(array); i >= 0; i -= 1) {
+      if (predicate(array[i])) { return i; }
+    }
+
+    return -1;
+  },
+
   intersection<T>(...arrays: T[][]): T[] {
     if (_.isEmpty(arrays)) { return []; }
 
@@ -100,6 +117,10 @@ const e = {
 
   take<T> (array: T[], n: number = 1): T[] {
     return array.slice(0, n);
+  },
+
+  sortedIndex<T>(array: T[], val: T) {
+    return bSearch(array, val, 0, array.length);
   },
 
   unzip<T>(arrays: T[][]): T[][] {

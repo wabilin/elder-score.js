@@ -6,7 +6,7 @@
 - [x] difference
 - [x] drop -> rest
 - [x] dropRight -> initial
-- [ ] findLastIndex
+- [x] findLastIndex
 - [x] first -> head
 - [x] flatten
 - [x] fromPairs (fromEntries)
@@ -15,7 +15,7 @@
 - [x] intersection
 - [x] last
 - [x] rest
-- [ ] sortedIndex
+- [x] sortedIndex
 - [x] tail -> rest
 - [x] take
 - [x] union

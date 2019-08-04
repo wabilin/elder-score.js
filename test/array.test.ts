@@ -74,6 +74,48 @@ describe('initial', () => {
   });
 });
 
+describe('findLastIndex', () => {
+  it('returns last found element index', () => {
+    expect(
+      _.findLastIndex([1, 2, 2, 3], x => x === 2)
+    ).toBe(2);
+  })
+
+  it('returns -1 when nothing found', () => {
+    expect(
+      _.findLastIndex([1, 2, 2, 3], x => x === 4)
+    ).toBe(-1);
+  })
+})
+
+describe('sortedIndex', () => {
+  it('returns index of value should be inserted in an sorted array', () => {
+    expect(
+      _.sortedIndex([1, 2, 3, 4 ,5], 2)
+    ).toBe(1);
+
+    expect(
+      _.sortedIndex([1, 1, 2, 3, 4 ,5], 2)
+    ).toBe(2);
+
+    expect(
+      _.sortedIndex([1, 2, 3, 4 ,5], 0)
+    ).toBe(0);
+
+    expect(
+      _.sortedIndex([1, 2, 3, 4 ,5], 1)
+    ).toBe(0);
+
+    expect(
+      _.sortedIndex([1, 2, 3, 4 ,5], 1.5)
+    ).toBe(1);
+
+    expect(
+      _.sortedIndex([1, 2, 3, 4, 5], 8)
+    ).toBe(5);
+  });
+})
+
 describe('intersection', () => {
   it('returns [] when given no arrays', () => {
     expect(
