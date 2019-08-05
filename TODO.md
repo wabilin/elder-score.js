@@ -1,7 +1,7 @@
 # TODO List
 
 ## Array
-- [ ] chunk
+- [x] chunk
 - [x] compact
 - [x] difference
 - [x] drop -> rest
@@ -15,6 +15,7 @@
 - [x] intersection
 - [x] last
 - [x] rest
+- [x] range
 - [x] sortedIndex
 - [x] tail -> rest
 - [x] take
