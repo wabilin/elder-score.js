@@ -1,7 +1,7 @@
 # TODO List
 
 ## Array
-- [ ] chunk
+- [x] chunk
 - [x] compact
 - [x] difference
 - [x] drop -> rest
