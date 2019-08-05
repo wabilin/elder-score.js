@@ -22,6 +22,17 @@ const bSearch = <T>(array: T[], val: T, low: number, high: number): number => {
   return bSearch(array, val, low, m);
 };
 
+const range = (start: number, end: number, step = 1) => {
+  const len = Math.max(Math.ceil((end - start) / step), 0);
+  // tslint:disable-next-line: prefer-array-literal
+  const ary = Array(len);
+  for (let val = start, i = 0; i < len; i += 1, val += step) {
+    ary[i] = val;
+  }
+
+  return ary;
+}
+
 const { assign, entries, keys, values } = Object;
 const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
 const { isArray } = Array;
@@ -60,6 +71,19 @@ const e = {
 
   isObjectLike(x: unknown): x is object {
     return typeof x === 'object' && x !== null;
+  },
+
+  range(start: number, end?: number, step?: number): number[] {
+    if (end === undefined) {
+      return range(0, start, step);
+    }
+    return range(start, end, step);
+  },
+
+  chunk<T>(array: T[], size = 1): T[][] {
+    const { length } = array;
+    return range(0, Math.ceil(length / size) * size, size)
+      .map(i => array.slice(i, i + size));
   },
 
   compact<T>(elements: T[]): T[] {

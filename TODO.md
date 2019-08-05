@@ -15,6 +15,7 @@
 - [x] intersection
 - [x] last
 - [x] rest
+- [x] range
 - [x] sortedIndex
 - [x] tail -> rest
 - [x] take

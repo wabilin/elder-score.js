@@ -1,5 +1,15 @@
 import _ from '_';
 
+describe('chunk', () => {
+  it('creates an array of elements split into groups the length of size', () => {
+    const oneTo6 = [1, 2, 3, 4, 5, 6];
+    expect(_.chunk(oneTo6)).toEqual([[1], [2], [3], [4], [5], [6]]);
+    expect(_.chunk(oneTo6, 2)).toEqual([[1, 2], [3, 4], [5, 6]]);
+    expect(_.chunk(oneTo6, 3)).toEqual([[1, 2, 3], [4, 5, 6]]);
+    expect(_.chunk(oneTo6, 4)).toEqual([[1, 2, 3, 4], [5, 6]]);
+  })
+});
+
 describe('compact', () => {
   it('remove all falsy values', () => {
     expect(
@@ -87,6 +97,18 @@ describe('findLastIndex', () => {
     ).toBe(-1);
   })
 })
+
+describe('range', () => {
+  it('creates a array in range', () => {
+    expect(_.range(3)).toEqual([0, 1, 2]);
+
+    expect(_.range(0, 4)).toEqual([0, 1, 2, 3]);
+    expect(_.range(2, 5)).toEqual([2, 3, 4]);
+
+    expect(_.range(0, 4, 1)).toEqual([0, 1, 2, 3]);
+    expect(_.range(0, 4, 2)).toEqual([0, 2]);
+  })
+});
 
 describe('sortedIndex', () => {
   it('returns index of value should be inserted in an sorted array', () => {
