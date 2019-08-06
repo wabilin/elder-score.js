@@ -1,4 +1,5 @@
-import _ from '_';
+// tslint:disable-next-line: no-relative-imports
+import _ from '../src/_';
 
 describe('chunk', () => {
   it('creates an array of elements split into groups the length of size', () => {
