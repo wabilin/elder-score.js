@@ -37,6 +37,10 @@ const { assign, entries, keys, values } = Object;
 const { isInteger, isNaN, isFinite, isSafeInteger } = Number;
 const { isArray } = Array;
 
+interface FuncObj {
+  [key: string]: Function|unknown;
+}
+
 // e for Elder Score
 const e = {
   // functions from Object
@@ -177,6 +181,13 @@ const e = {
   max (array: number[]): number {
     return Math.max(...array);
   },
+
+  bindAll<T extends FuncObj>(object: T, ...methodNames: (keyof T)[]) {
+    methodNames.forEach(name => {
+      const old = object[name];
+      object[name] = (<Function>old).bind(object)
+    });
+  }
 };
 
 // alias
