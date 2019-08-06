@@ -1,4 +1,5 @@
-import _ from '_';
+// tslint:disable-next-line: no-relative-imports
+import _ from '../src/_';
 
 describe('isArguments', () => {
   it('returns false when give other types', () => {
