@@ -40,6 +40,7 @@ const { isArray } = Array;
 interface FuncObj {
   [key: string]: Function|unknown;
 }
+type Keyable = string|number;
 
 // e for Elder Score
 const e = {
@@ -182,12 +183,26 @@ const e = {
     return Math.max(...array);
   },
 
+  has(obj: object, key: string|number|symbol) {
+    return obj.hasOwnProperty(key);
+  },
+
   bindAll<T extends FuncObj>(object: T, ...methodNames: (keyof T)[]) {
     methodNames.forEach(name => {
       const old = object[name];
       object[name] = (<Function>old).bind(object)
     });
-  }
+  },
+
+  memoize<K extends Keyable, T, R, TH>(fun: (key: K, ...rest: T[]) => R, hasher?: Function) {
+    const cache: { [key: string]: R } = {};
+    return function(this: TH, key: K , ...rest: T[]) {
+      if (!e.has(cache, key)) {
+        cache[key] = fun.apply(this, [key, ...rest]);
+      }
+      return cache[key];
+    };
+  },
 };
 
 // alias
